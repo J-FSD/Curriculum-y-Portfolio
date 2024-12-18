@@ -253,6 +253,37 @@ main {
   border-radius: 0 0 20px 20px;
 }
 
+@media screen and (min-height: 850px) {
+  .section.active#section-about .container .left, .section.active#section-about .container .right {
+    gap: 5vw;
+  }
+  .section.active#section-about .container .profile {
+    flex: 3.8;
+  }
+}
+@media screen and (max-height: 580px) {
+  .section.active#section-about .container .left > div, .section.active#section-about .container .right > div {
+    flex: 1;
+  }
+  .section.active#section-about .container .left > div.profile h2, .section.active#section-about .container .right > div.profile h2 {
+    font-size: calc((clamp(325px, 40vw, 425px) - 6vw) / 20);
+  }
+  .section.active#section-about .container .left > div.contact h2, .section.active#section-about .container .right > div.contact h2 {
+    font-size: calc((clamp(325px, 40vw, 425px) - 6vw) / 20);
+  }
+  .section.active#section-about .container .left img, .section.active#section-about .container .right img {
+    display: none;
+  }
+}
+@media screen and (max-height: 510px) {
+  .section.active#section-about .container .left, .section.active#section-about .container .right {
+    flex-direction: row;
+  }
+  .section.active#section-about .container .left > div, .section.active#section-about .container .right > div {
+    flex: 1;
+    height: 80%;
+  }
+}
 @media screen and (max-width: 685px) {
   .section.active#section-about .container {
     flex-direction: row;
@@ -317,13 +348,5 @@ main {
   .section .container-arrow:hover::before {
     box-shadow: 4.91px 4.91px 15px #bebebe, -4.91px -4.91px 15px #ffffff;
     opacity: 0.9;
-  }
-}
-@media screen and (min-height: 850px) {
-  .section.active#section-about .container .left, .section.active#section-about .container .right {
-    gap: 5vw;
-  }
-  .section.active#section-about .container .profile {
-    flex: 3.8;
   }
 }/*# sourceMappingURL=styles.css.map */

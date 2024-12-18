@@ -325,6 +325,74 @@ main{
     }
 }
 
+
+
+
+
+@media screen and (min-height: 850px){
+    .section{
+        &.active#section-about .container{
+            // background-color: #f00;
+            .left, .right{
+                // height: 80vh;
+                gap: 5vw;
+            }
+            .profile{
+                flex: 3.8;
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-height: 580px){
+    .section{
+        &.active#section-about .container{
+            .left, .right{
+                // flex-direction: row;
+
+                > div{
+                    flex: 1;
+                    // padding: 1vw;
+                    // height: 80%;
+
+                    &.profile{
+                        h2{
+                            font-size: calc((clamp(325px, 40vw, 425px) - (4vw + 2vw)) / 20);
+                        }
+                    }
+                    &.contact{
+                        h2{
+                            font-size: calc((clamp(325px, 40vw, 425px) - (4vw + 2vw)) / 20);
+                        }
+                    }
+                }
+                img{
+                    display: none;
+                }
+            }
+            // .profile{
+            //     flex: 3.5;
+            // }
+        }
+    }
+}
+
+@media screen and (max-height: 510px){
+    .section{
+        &.active#section-about .container{
+            .left, .right{
+                flex-direction: row;
+                > div{
+                    flex: 1;
+                    height: 80%;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 685px){
     .section{
         &.active{
@@ -411,23 +479,6 @@ main{
             &:hover::before{
                 box-shadow: 4.91px 4.91px 15px #bebebe, -4.91px -4.91px 15px #ffffff;
                 opacity: .9;
-            }
-        }
-    }
-}
-
-
-
-@media screen and (min-height: 850px){
-    .section{
-        &.active#section-about .container{
-            // background-color: #f00;
-            .left, .right{
-                // height: 80vh;
-                gap: 5vw;
-            }
-            .profile{
-                flex: 3.8;
             }
         }
     }
